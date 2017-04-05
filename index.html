@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html ng-app="ckApp" ng-controller="myController">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <!--js-->
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!--css-->
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    
+    
+</head>
+<body>
+	<!-- 主界面菜单同时移动 -->
+	    <!-- 侧滑导航根容器 -->
+	    <div class="mui-off-canvas-wrap mui-draggable">
+	        <!-- 主页面容器 -->
+	        <div class="mui-inner-wrap">
+	            <!-- 菜单容器 -->
+	            <aside class="mui-off-canvas-left" id="offCanvasSide">
+	                <div class="mui-scroll-wrapper">
+	                    <div class="mui-scroll">
+	                        <!-- 菜单具体展示内容 -->
+	                        <div class="menuTopBox">
+	                        	<img src="images/avatar.png" class="avatar"/>
+	                        	<span class="nickname">BIGFISH</span>
+	                        </div>
+	                        <ul class="mui-table-view">
+							    <li class="mui-table-view-cell"><span class="mui-icon mui-icon-chat"></span>客服</li>
+							    <li class="mui-table-view-cell"><span class="mui-icon mui-icon-pengyouquan"></span>菜单</li>
+							    <li class="mui-table-view-cell"><span class="mui-icon mui-icon-paperplane"></span>留言</li>
+							    <li class="mui-table-view-cell"><span class="mui-icon mui-icon-settings"></span>调整</li>
+							    <li class="mui-table-view-cell"><span class="mui-icon mui-icon-gear"></span>设置</li>
+							    <li class="mui-table-view-cell"><span class="mui-icon mui-icon-help"></span>帮助</li>
+							</ul>
+							<div class="logoutBox">
+								<button type="button" class="mui-btn mui-btn-danger" id="logout">注销</button>
+							</div>
+	                    </div>
+	                </div>
+	            </aside>
+	            <!-- 主页面标题 -->
+	            <header class="mui-bar mui-bar-nav">
+	                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+	                <h1 class="mui-title">GEEKMALL</h1>
+	            </header>
+	            <!-- 主页面内容容器 -->
+	            <div class="mui-content mui-scroll-wrapper">
+	                <div class="mui-scroll">
+	                    <!-- 主界面具体展示内容 -->
+	                    <div id="slider" class="mui-slider" >
+							<div class="mui-slider-group mui-slider-loop">
+								<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#">
+										<img src="images/slider-03.png">
+									</a>
+								</div>
+								<!-- 第一张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="images/slider-01.png">
+									</a>
+								</div>
+								<!-- 第二张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="images/slider-02.png">
+									</a>
+								</div>
+								<!-- 第三张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="images/slider-03.png">
+									</a>
+								</div>
+								<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#">
+										<img src="images/slider-01.png">
+									</a>
+								</div>
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active"></div>
+								<div class="mui-indicator"></div>
+								<div class="mui-indicator"></div>
+							</div>
+						</div><!--slider-End-->
+						<div class="personInfo">
+							<div class="infoLeftBox">
+								<div class="avatarBox">
+									<img src="images/avatar.png"/>
+								</div>
+								<h5>黄金会员</h5>
+							</div>
+							<div class="infoRightBox">
+								<div class="infoTopBox">
+									<p class="username" ng-bind="username"></p>
+									<span class="intro" ng-bind="address"></span>
+								</div>
+								<div class="infoBottomBox">
+									<ul class="infoList">
+										<li>
+											<span>收藏</span><br />
+											<span ng-bind="moneyObj.yue"></span>
+										</li>
+										<li>
+											<span>余额</span><br />
+											<span ng-bind="moneyObj.shouyi"></span>
+										</li>
+										<li>
+											<span>购物车</span><br />
+											<span ng-bind="moneyObj.leiji"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div><!--person-info-End-->
+						<div class="infoBar">
+							<a href="goodsStatus.html?1">
+								<div class="barBox">
+									<img src="images/wddd.png"/>我的订单
+								</div>
+							</a>
+							<a href="goodsStatus.html?2">
+								<div class="barBox">
+									<img src="images/dsh.png"/>待收货
+								</div>
+							</a>
+							<a href="goodsStatus.html?3">
+								<div class="barBox">
+									<img src="images/pj.png"/>待评价
+								</div>
+							</a>
+							<a href="goodsStatus.html?4">
+								<div class="barBox">
+									<img src="images/sh.png"/>售后
+								</div>
+							</a>
+						</div>
+						<ul class="mui-table-view">
+						    <li class="mui-table-view-cell mui-media" id="geekmall">
+					            <img class="mui-media-object mui-pull-left" src="images/sc0.png">
+					            <div class="mui-media-body">
+					             	Geek商城
+					                <p class='mui-ellipsis'>进入Geek商城，选择您的Geek设备</p>
+					            </div>
+						    </li>
+						    <li class="mui-table-view-cell mui-media" id="geekinfo">
+					            <img class="mui-media-object mui-pull-left" src="images/zx.png">
+					            <div class="mui-media-body">
+					             	Geek资讯
+					                <p class='mui-ellipsis'>进入Geek资讯，游览最新资讯</p>
+					            </div>
+						    </li>
+						    <li class="mui-table-view-cell mui-media" id="geekdiy">
+					            <img class="mui-media-object mui-pull-left" src="images/zdi.png">
+					            <div class="mui-media-body">
+					             	 自定义组装设备
+					                <p class='mui-ellipsis'>进入组装一台最适合您的设备。</p>
+					            </div>
+						    </li>
+						    <li class="mui-table-view-cell mui-media" id="geekgoto">
+					            <img class="mui-media-object mui-pull-left" src="images/zjty.png">
+					            <div class="mui-media-body">
+					             	实体机体验
+					                <p class='mui-ellipsis'>点击进入查看最近的实体店前去体验</p>
+					            </div>
+						    </li>
+						</ul>						
+	                </div>
+	            </div>
+	       	 <div class="mui-off-canvas-backdrop"></div>
+	       	 	
+	        </div>
+	    </div>
+	    <!--actionsheet-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#" >拍照</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">从相册中获取</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture">取消</a>
+				</li>
+			</ul>
+		</div>
+</body>
+</html>

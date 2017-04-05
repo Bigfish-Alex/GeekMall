@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--css-->
+		<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/geekinfo.css"/>
+		
+		<!--js-->
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<img src="images/back.png" id="back"/>
+            <h1 class="mui-title">Geek资讯</h1>
+        </header>
+        <div class="centerContainer">
+			
+        </div>
+		
+	</body>
+	<script type="text/javascript">
+		//启用双击监听
+		mui.init({
+			gestureConfig:{
+				doubletap:true
+			},
+			subpages:[{
+				url:'infoList.html',
+				id:'infoList.html',
+				styles:{
+					top: '45px',
+					bottom: '0px',
+				}
+			}]
+		});
+	
+		var contentWebview = null;
+		document.querySelector('header').addEventListener('doubletap',function () {
+			if(contentWebview==null){
+				contentWebview = plus.webview.currentWebview().children()[0];
+			}
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+		});
+		
+		var back=document.getElementById('back');
+		back.addEventListener('tap',function(){
+			mui.openWindow('index.html')
+		})
+	</script>
+</html>

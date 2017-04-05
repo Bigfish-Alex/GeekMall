@@ -1,0 +1,36 @@
+$headerColor:#4dc0d2;
+header{
+    background: $headerColor;
+    color: #FFFFFF;
+    h1{
+        color: #FFFFFF;
+    }
+    a{
+        color: #FFFFFF;
+    }
+    #back{
+        position: absolute;
+        width: 28px;
+        top: 8px;
+    }
+}
+.centerContainer{
+    width:100%;
+    position: absolute;
+    top: 44px;
+    bottom: 0px;
+    background: #FFFFFF;
+}
+.clear{
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    clear: both;
+}
+p{
+    margin: 0;
+}
+.myLiStyle{
+    width: 100%;
+    padding: 5px 0px;
+}

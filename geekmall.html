@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--css-->
+		<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/geekmall.css"/>
+		
+		<!--js-->
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/html5PlusCommon.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/photo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/geekmall.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<img src="images/back.png" id="back"/>
+            <h1 class="mui-title">Geek商城</h1>
+        </header>
+        <div class="centerContainer">
+        	<div class="goodsBox">
+        		<img src="images/r7000.jpg"/>
+        		<p class="goodsName">燃7000-轻薄颜值代表</p>
+        		<p><span class="price">￥6,999</span></p>
+        		<img src="images/sc.png" class="buyBtn"/>
+        	</div>
+        </div>
+	</body>
+	<script type="text/javascript">
+		var back=document.getElementById('back');
+		back.addEventListener('tap',function(){
+			mui.back();
+		})
+	</script>
+</html>

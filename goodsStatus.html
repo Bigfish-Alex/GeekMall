@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--css-->
+		<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/goodsStatus.css"/>
+		
+		<!--js-->
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/html5PlusCommon.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/photo.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<img src="images/back.png" id="back"/>
+            <h1 class="mui-title">商品状态</h1>
+        </header>
+        <div class="centerContainer">
+        	<div class="mui-slider">
+	            <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+	                <a class="mui-control-item" href="#item1">全部订单</a>
+	                <a class="mui-control-item" href="#item2">待收货</a>
+	                <a class="mui-control-item" href="#item3">待评价</a>
+	                <a class="mui-control-item" href="#item4">售后</a>
+	            </div>
+	            <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+	            <div class="mui-slider-group">
+	                <div id="item1" class="mui-slider-item mui-control-content mui-active">
+	                	<div class="ulBox">
+							<span>暂无商品</span>
+	                    </div>
+	                </div>
+	                <div id="item2" class="mui-slider-item mui-control-content">
+	                	<div class="ulBox">
+							<span>暂无商品</span>
+	                    </div>
+	                </div>
+	                <div id="item3" class="mui-slider-item mui-control-content">
+	                    <div class="ulBox">
+							<span>暂无商品</span>
+	                    </div>
+	                </div>
+	                <div id="item4" class="mui-slider-item mui-control-content">
+	                    <div class="ulBox">
+							<span>暂无商品</span>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+	</body>
+	<script type="text/javascript">
+			var back=document.getElementById('back');
+			back.addEventListener('tap',function(){
+				mui.back();
+			})
+			mui.plusReady(function(){
+				plus.key.addEventListener('backbutton',function(){
+					window.history.go(-1);
+				},false);
+			})
+		</script>
+</html>

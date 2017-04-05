@@ -1,0 +1,32 @@
+@import'global';
+.centerContainer{
+    .zhmxBox{
+        padding: 5px;
+    }
+    .search{
+        width: 100%;
+        margin-top: -8px;
+        margin-bottom: 8px;
+    }
+    .marginRight{
+        margin-right: 20px;
+    }
+    table{
+        width: 100%;
+        font-size: 12px;
+        border: 1px solid rgba(77,192,210,0.4);
+        text-align: center;
+        th{
+            background: skyblue; 
+            color: #FFFFFF;
+        }
+        th,td{
+            border-right: 1px solid rgba(77,192,210,0.4);
+            border-bottom: 1px solid rgba(77,192,210,0.4);
+            padding: 4px 0px;
+        }
+    }
+    select{
+        color: #C7C7CC;
+    }
+}

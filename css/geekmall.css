@@ -1,0 +1,56 @@
+header {
+  background: #4dc0d2;
+  color: #FFFFFF; }
+  header h1 {
+    color: #FFFFFF; }
+  header a {
+    color: #FFFFFF; }
+  header #back {
+    position: absolute;
+    width: 28px;
+    top: 8px; }
+
+.centerContainer {
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  bottom: 0px;
+  background: #FFFFFF; }
+
+.clear {
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  clear: both; }
+
+p {
+  margin: 0; }
+
+.myLiStyle {
+  width: 100%;
+  padding: 5px 0px; }
+
+.centerContainer {
+  width: 100%;
+  background: aliceblue; }
+  .centerContainer .goodsBox {
+    width: 48.5%;
+    margin-left: 1%;
+    margin-top: 5px;
+    float: left;
+    background: #FFFFFF;
+    position: relative; }
+    .centerContainer .goodsBox .goodsName {
+      text-indent: 10px; }
+    .centerContainer .goodsBox .price {
+      margin-left: 8px;
+      color: red; }
+    .centerContainer .goodsBox .buyBtn {
+      width: 16px;
+      position: absolute;
+      bottom: 3px;
+      right: 6px; }
+    .centerContainer .goodsBox img {
+      width: 100%; }
+
+/*# sourceMappingURL=geekmall.css.map */

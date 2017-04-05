@@ -1,0 +1,32 @@
+{
+  "tjsh.html": {
+    "href": "tjsh.html",
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/jquery-3.1.1.min.js",
+      "js/angular.min.js",
+      "js/index.js",
+      "js/html5PlusCommon.js",
+      "js/immersed.js",
+      "css/mui.css",
+      "css/index.css",
+      "images/ptfgs.gif",
+      "images/tuijian.png",
+      "images/zhanghu.png",
+      "images/shanghu.png",
+      "images/tuijianma.png",
+      "images/avatar.png",
+      "images/slider-03.png",
+      "images/slider-01.png",
+      "images/slider-02.png"
+    ],
+    "refer": [
+      "tjsh.html"
+    ],
+    "priority": 0
+  }
+}
